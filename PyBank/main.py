@@ -1,17 +1,18 @@
-#find total number of months
-
 import os
 import csv
 
 csvpath = os.path.join("PyBank","Resources","budget_data.csv")
 
-with open(csvpath) as csvfile:
-    csvreader = csv.reader(csvfile, delimiter=",")
-
 print("Financial Analysis")
 print("-------------------")
 
-for row in csvreader:
-    month_count = len(row)
-    
+
+with open(csvpath) as csvfile:
+
+#find total number of months
+    csvreader = csv.reader(csvfile, delimiter=",")
+    for row in csvreader:
+        month_count = len(row)
+print(month_count)
+
 
