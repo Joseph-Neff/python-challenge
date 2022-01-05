@@ -11,8 +11,12 @@ with open(csvpath) as csvfile:
 
 #find total number of months
     csvreader = csv.reader(csvfile, delimiter=",")
-    for row in csvreader:
-        month_count = len(row)
+    # csv_header = next(csvreader)
+    # print(f"CSV Header: {csv_header}")
+
+    for months in csvreader:
+        month_count = len(months)
+
 print(month_count)
 
 
