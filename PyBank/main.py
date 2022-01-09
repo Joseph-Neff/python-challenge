@@ -13,6 +13,7 @@ with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
     # csv_header = next(csvreader)
     # print(f"CSV Header: {csv_header}")
+    print(csvreader)
 
     for months in csvreader:
         month_count = len(months)
