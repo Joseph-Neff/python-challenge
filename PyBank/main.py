@@ -6,18 +6,22 @@ csvpath = os.path.join("PyBank","Resources","budget_data.csv")
 print("Financial Analysis")
 print("-------------------")
 
-
 with open(csvpath) as csvfile:
 
 #find total number of months
     csvreader = csv.reader(csvfile, delimiter=",")
-    # csv_header = next(csvreader)
-    # print(f"CSV Header: {csv_header}")
-    print(csvreader)
+    csv_header = next(csvreader)
+    print(f"CSV Header: {csv_header}")
+    months = []
+    profits= []
+    profit_change= []
 
-    for months in csvreader:
+    for row in csvfile:
+        months.append(row[0])
+        profits.append(int(row[1]))
         month_count = len(months)
+        profits_total = sum(profits)
 
-print(month_count)
+print('Total Months: '+ str(month_count))
 
 
