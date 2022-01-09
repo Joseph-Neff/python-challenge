@@ -20,10 +20,11 @@ with open(csvpath) as csvfile:
         months.append(row[0])
         profits.append(row[1])
     
-    
+
     month_count = len(months)
     profits = [int(item) for item in profits]
     profits_total = sum(profits)
+    
 
 print('Total Months: ' + str(month_count))
 print('Total Profit: ' + str(profits_total))
