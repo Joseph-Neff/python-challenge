@@ -1,5 +1,6 @@
 import os
 import csv
+from typing import ItemsView
 
 csvpath = os.path.join("PyBank","Resources","budget_data.csv")
 
@@ -18,12 +19,10 @@ with open(csvpath) as csvfile:
     
     for row in csvfile:
         months.append(row[0])
-        profits.append(row[1])
-    
-
-    month_count = len(months)
-    profits = [int(item) for item in profits]
-    profits_total = sum(profits)
+        profits.append(row[1])  
+month_count = len(months)
+profits = [int(item) for item in profits]
+profits_total = sum(profits)
     
 
 print('Total Months: ' + str(month_count))
