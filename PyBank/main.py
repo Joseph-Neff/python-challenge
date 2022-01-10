@@ -37,14 +37,15 @@ with open(csvpath) as csvfile:
 month_count = len(months)
 profits_total = sum(profits)
 average_profit = int(sum(change_in_profit))/int(len(change_in_profit))
-
-
+max_change = max(change_in_profit)
+min_change = min(change_in_profit)
 
 
 print("Financial Analysis")
 print("-------------------")
 print('Total Months: ' + str(month_count))
-print('Total Profit: ' + str(profits_total))
-print('Average Change: ' + str(round(average_profit)))
-
+print('Total Profit: ' + "$" + str(profits_total))
+print('Average Change: ' "$" + str(round(average_profit)))
+print(min_change)
+print(max_change)
 
