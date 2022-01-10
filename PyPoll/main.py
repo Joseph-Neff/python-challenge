@@ -59,17 +59,18 @@ print("O'Tooley: " + str(tooley_percent) + '%' + ' ' + '(' + str(tooley_count) +
 print('-----------------')
 print('Winner: ' + str(winner))
 
-output_path = os.path.join("PyPoll", "Analysis", "Results.csv")
+output_path = os.path.join("PyPoll", "Analysis", "Results.txt")
 
-with open(output_path, 'w', newline="") as csvfile:
-    csvwriter = csv.writer(csvfile)
-    csvwriter.writerow('Election Results')
-    csvwriter.writerow('-----------------')     
-    csvwriter.writerow('Total Votes ' + str(total_votes_count))
-    csvwriter.writerow('-----------------')
-    csvwriter.writerow('Khan: ' + str(khan_percent) + '%' + ' ' + '(' + str(khan_count) + ')')
-    csvwriter.writerow('Correy: ' + str(correy_percent) + '%' + ' ' + '(' + str(correy_count) + ')')
-    csvwriter.writerow('Li: ' + str(li_percent) + '%' + ' ' + '(' + str(li_count) + ')')
-    csvwriter.writerow("O'Tooley: " + str(tooley_percent) + '%' + ' ' + '(' + str(tooley_count) + ')')
-    csvwriter.writerow('-----------------')
-    csvwriter.writerow('Winner: ' + str(winner))
+with open(output_path, 'w') as txt_file:
+    txt_file.write(f"""
+    Election Results
+    -----------------    
+    Total Votes: {str(total_votes_count)}
+    -----------------
+    Khan: {str(khan_percent)}% ({str(khan_count)})
+    Correy: {str(correy_percent)}% ({str(correy_count)})
+    Li: {str(li_percent)}% ({str(li_count)})
+    O'Tooley: {str(tooley_percent)}% ({str(tooley_count)})
+    -----------------
+    Winner: {str(winner)}
+    """)
