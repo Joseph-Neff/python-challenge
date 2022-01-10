@@ -14,14 +14,16 @@ with open(csvpath) as csvfile:
     csv_header = next(csvreader)
     #print(f"CSV Header: {csv_header}")
     months = []
-    profit = []
+    #profit = []
+    profit = 0
     profit_change = []
     
     for row in csvfile:
         months.append(row[0])
-        profit.append(row[1])  
+        profit =(row[1])
+
 month_count = len(months)
-profit = [int(item) for item in profit]
+#profit = [int(item) for item in profit]
 profits_total = sum(profit)
     
 
