@@ -18,7 +18,7 @@ with open(csvpath) as csvfile:
     profit_change = []
     #profit = [int(item) for item in profit]
     
-    for row in csvreader:
+    for row in csvfile:
         months.append(row[0])
         profit.append =(int(row[1]))
 

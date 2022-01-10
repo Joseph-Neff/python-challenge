@@ -20,7 +20,6 @@ with open(csvpath) as csvfile:
         profit_change.append = int(current_profit) - int(previous_profit)
         previous_profit = row[1]
         
-
 month_count = len(months)
 profits_total = sum(profits)
 #Average_change
